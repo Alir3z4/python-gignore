@@ -13,6 +13,7 @@ class Gignore(object):
     name = None
     file_content = None
     valid = True
+    errors = []
 
     def get_base_url(self):
         """
@@ -55,3 +56,15 @@ class Gignore(object):
         :type valid: bool
         """
         self.valid = valid
+
+    def add_error(self, error_message):
+        """
+        :type error_message: str
+        """
+        self.errors.append(error_message)
+
+    def get_errors(self):
+        """
+        :rtype: list of str
+        """
+        return self.errors

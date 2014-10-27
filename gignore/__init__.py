@@ -1,5 +1,10 @@
+import sys
 from urllib2 import urlopen
 import urllib2
+
+from gignore.utils import wrapwrite
+
+
 __version__ = (2014, 10, 0)
 
 
@@ -90,3 +95,22 @@ class Gignore(object):
 
         if name.endswith('.gitignore'):
             self.set_name(name.replace('.gitignore', ''))
+
+
+def main(argv):
+    if len(argv) != 1:
+        sys.exit(0)
+
+    giginore_name = str(argv[0])
+
+    gig = Gignore(giginore_name)
+    gig.get_gitignore_file()
+
+    if gig.is_valid():
+        wrapwrite(gig.get_file_content())
+    else:
+        wrapwrite("{0}\n".format('\n'.join(gig.get_errors())))
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

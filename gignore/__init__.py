@@ -11,6 +11,7 @@ def get_version():
 class Gignore(object):
     BASE_URL = 'https://raw.githubusercontent.com/github/gitignore/master/'
     name = None
+    file_content = None
 
     def get_base_url(self):
         """
@@ -29,3 +30,15 @@ class Gignore(object):
         :rtype: str
         """
         return self.name
+
+    def set_file_content(self, file_content):
+        """
+        :type file_content: str
+        """
+        self.file_content = file_content
+
+    def get_file_content(self):
+        """
+        :rtype: str
+        """
+        return self.file_content

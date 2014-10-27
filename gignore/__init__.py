@@ -12,6 +12,7 @@ class Gignore(object):
     BASE_URL = 'https://raw.githubusercontent.com/github/gitignore/master/'
     name = None
     file_content = None
+    valid = True
 
     def get_base_url(self):
         """
@@ -42,3 +43,15 @@ class Gignore(object):
         :rtype: str
         """
         return self.file_content
+
+    def is_valid(self):
+        """
+        :rtype: bool
+        """
+        return self.valid
+
+    def set_valid(self, valid):
+        """
+        :type valid: bool
+        """
+        self.valid = valid

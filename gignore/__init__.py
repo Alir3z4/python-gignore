@@ -15,6 +15,10 @@ class Gignore(object):
     valid = True
     errors = []
 
+    def __init__(self, name):
+        self.set_name(name)
+        self.clean_name()
+
     def get_base_url(self):
         """
         :rtype: str

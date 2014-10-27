@@ -68,3 +68,8 @@ class Gignore(object):
         :rtype: list of str
         """
         return self.errors
+    def clean_name(self):
+        name = self.get_name()
+
+        if name.endswith('.gitignore'):
+            self.set_name(name.replace('.gitignore', ''))

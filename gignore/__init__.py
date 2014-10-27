@@ -1,3 +1,5 @@
+from urllib2 import urlopen
+import urllib2
 __version__ = (2014, 10, 0)
 
 
@@ -72,6 +74,17 @@ class Gignore(object):
         :rtype: list of str
         """
         return self.errors
+
+    def get_gitignore_file(self):
+        try:
+            resp = urlopen('{0}{1}.gitignore'.format(self.get_base_url(),
+                                                     self.get_name()))
+            self.set_file_content(resp.read())
+
+        except urllib2.HTTPError as exc:
+            self.add_error("{0}:{1}".format(exc.code, exc.read()))
+            self.set_valid(False)
+
     def clean_name(self):
         name = self.get_name()
 

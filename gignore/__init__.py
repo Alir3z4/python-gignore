@@ -9,3 +9,10 @@ def get_version():
 
 
 class Gignore(object):
+    BASE_URL = 'https://raw.githubusercontent.com/github/gitignore/master/'
+
+    def get_base_url(self):
+        """
+        :rtype: str
+        """
+        return self.BASE_URL

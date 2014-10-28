@@ -9,3 +9,6 @@
 * Feature: Add ``AUTHORS.rst`` file.
 * Feature: Add  Python3 support.
 * Feature: Add command line interface.
+* Feature: Register/Upload the package in PyPi.
+
+

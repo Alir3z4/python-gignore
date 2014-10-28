@@ -102,6 +102,13 @@ def main():
         'name',
         help='Name of the .gitignore file.'
     )
+    parser.add_argument(
+        '--version',
+        '-v',
+        action='version',
+        version='%(prog)s {0}'.format(get_version()),
+        help='show version number',
+    )
 
     args = parser.parse_args()
 

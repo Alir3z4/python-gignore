@@ -55,6 +55,17 @@ Usage
     >>>
 
 
+
+Supported Python Versions
+-------------------------
+
+``gignore`` currently can be run on multiple python versions:
+
+* Python 2 (2.7)
+* Python 3 (3.2, 3.3, 3.4)
+* PyPy
+
+
 Installation
 ------------
 ``gignore`` is available on pypi

@@ -1,5 +1,5 @@
 import sys
-from compat import urlopen, HTTPError
+from gignore.compat import urlopen, HTTPError
 from gignore.utils import wrapwrite
 
 

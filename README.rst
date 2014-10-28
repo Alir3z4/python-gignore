@@ -20,32 +20,6 @@ The output of ``gignore`` will be echo out to command line and can be simply
 pipe to other applications.
 
 
-Installation
-------------
-``gignore`` is available on pypi
-
-http://pypi.python.org/pypi/gignore
-
-So easily install it by ``pip``
-::
-    
-    $ pip install gignore
-
-Or by ``easy_install``
-::
-    
-    $ easy_install gignore
-
-Another way is by cloning ``python-gignore``'s `git repo <https://github.com/Alir3z4/python-gignore>`_ ::
-    
-    $ git clone git://github.com/Alir3z4/python-gignore.git
-
-Then install it by running:
-::
-    
-    $ python setup.py install
-
-
 Usage
 -----
 
@@ -79,6 +53,32 @@ Usage
     .Python
     # ....
     >>>
+
+
+Installation
+------------
+``gignore`` is available on pypi
+
+http://pypi.python.org/pypi/gignore
+
+So easily install it by ``pip``
+::
+    
+    $ pip install gignore
+
+Or by ``easy_install``
+::
+    
+    $ easy_install gignore
+
+Another way is by cloning ``python-gignore``'s `git repo <https://github.com/Alir3z4/python-gignore>`_ ::
+    
+    $ git clone git://github.com/Alir3z4/python-gignore.git
+
+Then install it by running:
+::
+    
+    $ python setup.py install
 
 
 Authors

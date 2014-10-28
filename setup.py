@@ -12,6 +12,11 @@ setup(
     description='Get .gitignore files from github.com/github/gitignore',
     long_description=open('README.rst').read(),
     platforms='OS Independent',
+    entry_points={
+        'console_scripts': [
+            'gignore=gignore:main'
+        ]
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',

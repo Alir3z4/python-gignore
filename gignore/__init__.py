@@ -1,4 +1,5 @@
-import sys
+import argparse
+
 from gignore.compat import urlopen, HTTPError
 from gignore.utils import wrapwrite
 
@@ -95,12 +96,16 @@ class Gignore(object):
             self.set_name(name.replace('.gitignore', ''))
 
 
-def main(argv):
-    if len(argv) != 1:
-        print("Usage: gignore <GITIGNORE_NAME>")
-        sys.exit(0)
+def main():
+    parser = argparse.ArgumentParser(prog='gignore')
+    parser.add_argument(
+        'name',
+        help='Name of the .gitignore file.'
+    )
 
-    giginore_name = str(argv[0])
+    args = parser.parse_args()
+
+    giginore_name = str(args.name)
 
     gig = Gignore(giginore_name)
     gig.get_gitignore_file()
@@ -112,4 +117,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()

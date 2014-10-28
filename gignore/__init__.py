@@ -97,6 +97,7 @@ class Gignore(object):
 
 def main(argv):
     if len(argv) != 1:
+        print("Usage: gignore <GITIGNORE_NAME>")
         sys.exit(0)
 
     giginore_name = str(argv[0])

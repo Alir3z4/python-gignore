@@ -97,7 +97,10 @@ class Gignore(object):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog='gignore')
+    parser = argparse.ArgumentParser(
+        prog='gignore',
+        description='Get .gitignore files from github.com/github/gitignore'
+    )
     parser.add_argument(
         'name',
         help='Name of the .gitignore file.'

@@ -44,3 +44,38 @@ Then install it by running:
 ::
     
     $ python setup.py install
+
+
+Usage
+-----
+
+**CLI**
+
+::
+
+    $ gignore Python
+    # Byte-compiled / optimized / DLL files
+    __pycache__/
+    *.py[cod]
+    ....
+
+
+**Backend**
+
+::
+
+    >>> from gignore import Gignore
+    >>> gig = Gignore('Python')
+    >>> gig.get_gitignore_file()
+    >>> print(gig.get_file_content())
+    # Byte-compiled / optimized / DLL files
+    __pycache__/
+    *.py[cod]
+
+    # C extensions
+    *.so
+
+    # Distribution / packaging
+    .Python
+    # ....
+    >>>

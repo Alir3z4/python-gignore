@@ -1,7 +1,5 @@
 import sys
-from urllib2 import urlopen
-import urllib2
-
+from compat import urlopen, HTTPError
 from gignore.utils import wrapwrite
 
 
@@ -86,7 +84,7 @@ class Gignore(object):
                                                      self.get_name()))
             self.set_file_content(resp.read())
 
-        except urllib2.HTTPError as exc:
+        except HTTPError as exc:
             self.add_error("{0}:{1}".format(exc.code, exc.read()))
             self.set_valid(False)
 

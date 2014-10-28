@@ -7,3 +7,4 @@
 * Feature: Add ``LICENSE`` file.
 * Feature: Add ``ChangeLog.rst`` file.
 * Feature: Add ``AUTHORS.rst`` file.
+* Feature: Add  Python3 support.

@@ -7,8 +7,7 @@ def wrapwrite(text):
 
     :rtype: str
     """
-    text = text.encode('utf-8')
     try:  # Python3
         sys.stdout.buffer.write(text)
     except AttributeError:
-        sys.stdout.write(text)
+        sys.stdout.write(text.encode('utf-8'))

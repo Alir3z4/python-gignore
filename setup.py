@@ -1,5 +1,6 @@
 from setuptools import setup
 
+
 setup(
     name='gignore',
     version=".".join(map(str, __import__('gignore').__version__)),

@@ -3,7 +3,7 @@ from gignore.compat import urlopen, HTTPError
 from gignore.utils import wrapwrite
 
 
-__version__ = (2014, 10, 0)
+__version__ = (2014, 10, 28)
 
 
 def get_version():

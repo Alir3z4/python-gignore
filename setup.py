@@ -14,7 +14,7 @@ setup(
     platforms='OS Independent',
     entry_points={
         'console_scripts': [
-            'gignore=gignore:main'
+            'gignore=gignore.cli:main'
         ]
     },
     classifiers=[

@@ -102,3 +102,10 @@ A big THANK YOU goes to:
 
 * François‎ for convincing Alireza to start the project.
 * Guido van Rossum for creating Python.
+
+
+
+License
+-------
+
+``gignore`` is distributed under the terms of BSD license.
